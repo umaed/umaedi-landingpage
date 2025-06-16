@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Umaedi Tech</title>
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="foto/erine&fritzy.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+    </video>
+
+    <div class="login-container">
+        <div class="login-box">
+            <img src="foto/ut.png" alt="Umaedi Tech" class="logo">
+            <h2>Selamat datang di Umaedi Tech</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Masukkan Username Anda</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Masukkan Password Anda</label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div class="links">
+                <a href="#">Lupa Password?</a>
+                <a href="#">Daftar Sekarang</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_login.js"></script>
+</body>
+</html>

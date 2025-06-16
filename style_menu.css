@@ -1,0 +1,559 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */ /* Dihapus agar scroll alami bekerja baik untuk konten panjang */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: #0a192f; /* Warna background gelap utama */
+    color: #ccd6f6; /* Warna teks utama */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Untuk smooth scroll dari CSS */
+}
+
+/* Animasi Partikel Background */
+#particles-js {
+    position: fixed;
+    top: 0; /* Pastikan menempel di atas */
+    left: 0; /* Pastikan menempel di kiri */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+     background-color: transparent;    /* Ini membuat background div partikel transparan */               
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 191, 255, 0.3);
+    position: fixed;
+    width: calc(100% - 100px);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-logo a {
+    color: #64ffda;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px; /* Sedikit dikurangi agar muat lebih banyak */
+}
+
+.nav-links a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 0.95em; /* Sedikit disesuaikan */
+    padding: 8px 12px; /* Padding disesuaikan */
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #64ffda;
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* User Profile */
+.user-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.user-profile #profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #64ffda;
+    object-fit: cover;
+}
+
+.user-profile #usernameDisplay {
+    color: #ccd6f6;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.user-profile .dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); /* Sedikit jarak dari profil */
+    right: 0;
+    background-color: #112240;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 8px 0;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.user-profile:hover .dropdown-content {
+    display: block;
+}
+
+.user-profile .dropdown-content a {
+    color: #ccd6f6;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: flex; /* Untuk ikon */
+    align-items: center; /* Untuk ikon */
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.user-profile .dropdown-content a i {
+    margin-right: 10px;
+    color: #64ffda;
+}
+
+.user-profile .dropdown-content a:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+}
+
+/* Main Content */
+.main-content {
+    padding: 100px 50px 40px; /* Padding atas disesuaikan dengan tinggi navbar, bawah ditambah */
+    margin-top: 60px;
+    max-width: 1200px; /* Konten tidak terlalu lebar di layar besar */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content section {
+    padding: 60px 0; /* Padding atas dan bawah untuk setiap section */
+    min-height: 300px; /* Tinggi minimal section, bisa disesuaikan */
+    border-bottom: 1px solid #233554; /* Garis pemisah antar section */
+}
+.main-content section:last-of-type {
+    border-bottom: none; /* Tidak ada border untuk section terakhir */
+}
+
+.main-content h1, .main-content h2 {
+    color: #64ffda;
+    margin-bottom: 30px; /* Jarak bawah lebih besar */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #233554; /* Garis bawah judul */
+    display: inline-block; /* Agar border-bottom sesuai lebar teks */
+}
+.main-content h1 {
+    font-size: 2.8em;
+}
+.main-content h2 {
+    font-size: 2.2em;
+}
+.main-content p {
+    color: #a8b2d1; /* Warna teks paragraf sedikit lebih terang */
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #112240;
+    padding: 30px; /* Padding lebih besar */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #64ffda;
+    display: flex;
+    flex-direction: column;
+}
+.card-icon {
+    color: #64ffda;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.2);
+}
+
+.card h3 {
+    color: #ccd6f6;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 0.95em;
+    color: #8892b0;
+    flex-grow: 1; /* Agar p mengisi ruang, button di bawah */
+}
+
+/* Seksi Produk */
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produk-item {
+    background-color: #112240;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #233554;
+}
+.produk-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.15);
+}
+.produk-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.produk-item h3 {
+    font-size: 1.4em;
+    color: #64ffda;
+    margin: 15px 20px 10px;
+}
+.produk-item p {
+    font-size: 0.9em;
+    color: #a8b2d1;
+    margin: 0 20px 15px;
+    flex-grow: 1;
+}
+.produk-item .harga {
+    font-size: 1em;
+    font-weight: bold;
+    color: #ccd6f6;
+    margin: 0 20px 15px;
+}
+.btn-produk {
+    display: block;
+    background-color: #64ffda;
+    color: #0a192f;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px; /* Hanya sudut bawah */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Mendorong tombol ke bawah */
+}
+.btn-produk:hover {
+    background-color: #52d3bc;
+}
+
+/* Seksi Galeri */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.galeri-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.galeri-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.galeri-item:hover img {
+    transform: scale(1.1);
+}
+.galeri-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 25, 47, 0.8);
+    color: #64ffda;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.galeri-item:hover .galeri-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Seksi Video */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+.video-item {
+    background-color: #112240;
+    padding: 15px;
+    border-radius: 8px;
+}
+.video-item iframe {
+    border-radius: 6px;
+    width: 100%; /* Responsif */
+}
+.video-item p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #a8b2d1;
+}
+
+/* Seksi Kontak & Laporan */
+.kontak-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.info-kontak, .form-laporan {
+    flex: 1;
+    min-width: 300px; /* Agar responsif */
+    background-color: #112240;
+    padding: 25px;
+    border-radius: 8px;
+}
+.info-kontak h3, .form-laporan h3 {
+    color: #64ffda;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.info-kontak p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #a8b2d1;
+}
+.info-kontak p i {
+    color: #64ffda;
+    margin-right: 15px;
+    width: 20px; /* Agar ikon rapi */
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    color: #ccd6f6;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #0a192f;
+    border: 1px solid #233554;
+    border-radius: 5px;
+    color: #ccd6f6;
+    font-size: 1em;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #64ffda;
+    box-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.btn-kirim-wa {
+    background-color: #25D366; /* Warna WhatsApp */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex; /* Untuk ikon jika ada */
+    align-items: center;
+}
+.btn-kirim-wa:hover {
+    background-color: #1DAE50;
+}
+.btn-kirim-wa i {
+    margin-right: 8px;
+}
+
+/* Seksi Tentang Kami */
+.tentang-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+.tentang-img {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #64ffda;
+}
+.tentang-content div {
+    flex: 2;
+    min-width: 300px;
+}
+.tentang-content h3 {
+    color: #64ffda;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.tentang-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+.tentang-content ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.tentang-content ul li i {
+    color: #64ffda;
+    margin-right: 10px;
+    margin-top: 4px; /* Penyesuaian vertikal ikon */
+}
+
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 30px 50px; /* Padding lebih besar */
+    background-color: #061222; /* Sedikit lebih gelap dari navbar/card */
+    border-top: 1px solid #233554;
+    color: #8892b0;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+.social-links {
+    margin-top: 15px;
+}
+.social-links a {
+    color: #8892b0;
+    margin: 0 12px;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #64ffda;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        width: calc(100% - 40px);
+    }
+    .nav-links {
+        display: none; /* Sembunyikan link untuk menu burger jika diperlukan nanti */
+        /* Atau buat jadi vertikal di bawah logo */
+    }
+    .main-content {
+        padding: 80px 20px 20px;
+    }
+    .main-content h1 {
+        font-size: 2.2em;
+    }
+    .main-content h2 {
+        font-size: 1.8em;
+    }
+    .kontak-container {
+        flex-direction: column;
+    }
+    .video-grid, .produk-grid, .galeri-grid {
+        grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+    }
+
+}
+
+/* Toggle Dark Mode Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(0, 0, 0);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #64ffda;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Efek tema dark */
+body.dark {
+  background-color: #ffffff;
+  color: #0a192f;
+}
+body.dark .navbar,
+body.dark .main-content,
+body.dark .card,
+body.dark .produk-item,
+body.dark .tentang-content div,
+body.dark .info-kontak,
+body.dark .form-laporan,
+body.dark footer {
+  background-color: #f0f0f0;
+  color: #0a192f;
+}

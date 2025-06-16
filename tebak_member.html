@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Member JKT48 - Umaedi Tech</title>
+    <link rel="stylesheet" href="style_menu.css">
+    <link rel="stylesheet" href="style_tebak_member.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="menu.html">Umaedi Tech</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="menu.html#home">Beranda</a></li>
+                <li><a href="menu.html#produk">Produk</a></li>
+                <li><a href="menu.html#galeri">Galeri</a></li>
+                <li><a href="tebak_member.html" class="active">Tebak JKT48</a></li>
+                <li><a href="menu.html#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="tebak-game">
+            <h2>Tebak Member JKT48!</h2>
+            <p>Uji pengetahuanmu tentang member JKT48. Tebak nama member dari foto yang ditampilkan!</p>
+            <div class="game-container">
+                <div id="image-container">
+                    </div>
+                <div id="options-container">
+                    </div>
+                <button id="next-btn" style="display:none;">Lanjut</button>
+                <div id="score-container">
+                    Skor: <span id="score">0</span>
+                </div>
+                 <div id="feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Umaedi Tech. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="script_tebak_member.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Utama - Umaedi Tech</title>
+    <link rel="stylesheet" href="style_menu.css">
+     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <div id="particles-js"></div> <header>
+        <nav class="navbar">
+            <div class="darkmode-toggle">
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+  </label>
+</div>
+
+            <div class="nav-logo">
+                <a href="#home">Umaedi Tech</a> </div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="tebak_member.html">Tebak JKT48</a></li> <li><a href="#video">Video</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#kontak">Kontak & Laporan</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                </ul>
+            <div class="user-profile">
+                <img src="foto/pp web.jpg" alt="Foto Profil" id="profilePic">
+                <span id="usernameDisplay">Pengguna</span>
+                <div class="dropdown-content">
+                    <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
+                    <a href="#" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Logout bro</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="active-section">
+            <h1 id="welcomeMessage">Selamat Datang!</h1>
+            <p>Ini adalah Umaedi Tech, tempat Anda menemukan solusi teknologi terdepan. Jelajahi produk, galeri, dan layanan kami.</p>
+            <div class="content-grid">
+                <div class="card">
+                    <i class="fas fa-newspaper fa-2x card-icon"></i>
+                    <h3>Berita Teknologi</h3>
+                    <p>Ikuti perkembangan terbaru dalam dunia teknologi, AI, dan inovasi digital langsung dari sumber terpercaya. Anjayy</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-lightbulb fa-2x card-icon"></i>
+                    <h3>Inovasi Terkini</h3>
+                    <p>Temukan bagaimana Umaedi Tech mendorong batas-batas kemungkinan dengan riset dan pengembangan yang berkelanjutan.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-cogs fa-2x card-icon"></i>
+                    <h3>Solusi Kustom</h3>
+                    <p>Butuh solusi teknologi yang disesuaikan? Kami siap membantu mewujudkan ide Anda menjadi kenyataan.</p>
+                </div>
+            </div>
+            <!-- Tambahan ke menu.html (letakkan di bawah section id="home") -->
+<section id="dashboard">
+  <h2>Statistik Umaedi Tech</h2>
+  <div class="content-grid">
+    <div class="card">
+      <i class="fas fa-users fa-2x card-icon"></i>
+      <h3><span class="counter" data-target="1240">0</span> Pengguna</h3>
+    </div>
+    <div class="card">
+      <i class="fas fa-code fa-2x card-icon"></i>
+      <h3><span class="counter" data-target="57">0</span> Proyek</h3>
+    </div>
+    <div class="card">
+      <i class="fas fa-bug fa-2x card-icon"></i>
+      <h3><span class="counter" data-target="15">0</span> Bug Ditangani</h3>
+    </div>
+  </div>
+</section>
+
+        </section>
+
+        <section id="produk">
+            <h2>Produk Unggulan Kami</h2>
+            <div class="produk-grid">
+                <div class="produk-item">
+                    <img src="foto/buku software.jpg" alt="Produk Alpha">
+                    <h3>Produk Alpha</h3>
+                    <p>Solusi perangkat lunak canggih untuk otomatisasi bisnis Anda. Meningkatkan efisiensi dan produktivitas.</p>
+                    <span class="harga">Hubungi untuk Penawaran</span>
+                    <a href="#" class="btn-produk">Detail Produk</a>
+                </div>
+                <div class="produk-item">
+                    <img src="foto/produkbeta.png" alt="Produk Beta">
+                    <h3>Produk Beta</h3>
+                    <p>Platform analitik data real-time yang memberikan insight mendalam untuk pengambilan keputusan yang lebih baik.</p>
+                    <span class="harga">Mulai dari Rp X.XXX.XXX</span>
+                    <a href="#" class="btn-produk">Detail Produk</a>
+                </div>
+                <div class="produk-item">
+                    <img src="foto/produk gemma.png" alt="Produk Gamma">
+                    <h3>Produk Gamma</h3>
+                    <p>Layanan keamanan siber terpadu untuk melindungi aset digital Anda dari ancaman yang berkembang.</p>
+                    <span class="harga">Langganan Bulanan/Tahunan</span>
+                    <a href="#" class="btn-produk">Detail Produk</a>
+                </div>
+                 <div class="produk-item">
+                    <img src="https://via.placeholder.com/300x200/1A2B4F/64FFDA?text=Layanan+Konsultasi" alt="Layanan Konsultasi">
+                    <h3>Layanan Konsultasi Tech</h3>
+                    <p>Dapatkan panduan ahli dari tim profesional kami untuk transformasi digital dan strategi teknologi Anda.</p>
+                    <span class="harga">Sesi per Jam</span>
+                    <a href="#" class="btn-produk">Jadwalkan Konsultasi</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri">
+            <h2>Galeri Kegiatan & Proyek</h2>
+            <div class="galeri-grid">
+                <div class="galeri-item">
+                    <img src="foto/erine1.jpg" alt="Foto Galeri 1: Inovasi Sirkuit">
+                    <div class="galeri-caption">Contoh walpaper oshi saya dari ai</div>
+                </div>
+                <div class="galeri-item">
+                    <img src="foto/erine2.jpg" alt="Foto Galeri 2: Tim Kolaborasi">
+                    <div class="galeri-caption">Foto jad lebih HD dengan AI</div>
+                </div>
+                <div class="galeri-item">
+                    <img src="foto/invesuma.jpg" alt="Foto Galeri 3: Workshop Teknologi">
+                    <div class="galeri-caption">Build your skil</div>
+                </div>
+                <div class="galeri-item">
+                    <img src="https://via.placeholder.com/400x300/1A2B4F/64FFDA?text=Data+Center" alt="Foto Galeri 4: Data Center">
+                    <div class="galeri-caption">Infrastruktur Data Center Kami</div>
+                </div>
+                 <div class="galeri-item">
+                    <img src="https://via.placeholder.com/400x300/1A2B4F/64FFDA?text=Presentasi+Produk" alt="Foto Galeri 5: Presentasi Produk">
+                    <div class="galeri-caption">Peluncuran Produk Terbaru</div>
+                </div>
+                 <div class="galeri-item">
+                    <img src="https://via.placeholder.com/400x300/1A2B4F/64FFDA?text=Ruang+Kerja+Modern" alt="Foto Galeri 6: Ruang Kerja Modern">
+                    <div class="galeri-caption">Suasana Ruang Kerja Inovatif</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video">
+            <h2>perkembangan AI</h2>
+            <p>Lihat lebih dekat produk dan inovasi kami melalui video.</p>
+            <div class="video-grid">
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/YaM-Y8RT4us?si=6QuIm9FbZliWLW0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Demo Produk Alpha: Revolusi Efisiensi</p>
+                </div>
+                <div class="video-item">
+                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/4LndYDSos9Y?si=WrR5__JkmiCetsHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Tech Talk: Masa Depan AI bersama Timothy Ronald</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <h2>Hubungi Kami & Laporkan Masalah</h2>
+            <div class="kontak-container">
+                <div class="info-kontak">
+                    <h3>Informasi Kontak</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl.Kampung banter, DS.Babakan-bandung,Kab.serang, Indonesia</p>
+                    <p><i class="fas fa-envelope"></i> umaediskyz6@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> (+62) 83818115136</p>
+                    <p>Jam Operasional: Senin - Jumat, 09:00 - 17:00 WIB</p>
+                </div>
+                <div class="form-laporan">
+                    <h3>Form Laporan Bug/Masalah</h3>
+                    <p>Mengalami kendala atau menemukan bug? Beritahu kami agar dapat segera kami tindak lanjuti. Aja meneng bae kaya curut</p>
+                    <form id="laporanForm">
+                        <div class="form-group">
+                            <label for="namaPelapor">Nama Anda:</label>
+                            <input type="text" id="namaPelapor" name="namaPelapor" placeholder="Nama Lengkap Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailPelapor">Email Anda (opsional):</label>
+                            <input type="email" id="emailPelapor" name="emailPelapor" placeholder="Alamat email Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="detailMasalah">Detail Masalah/Bug:</label>
+                            <textarea id="detailMasalah" name="detailMasalah" rows="5" placeholder="Jelaskan masalah atau bug yang Anda temukan secara detail..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-kirim-wa">Kirim Laporan via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang">
+            <h2>Tentang Umaedi Tech</h2>
+            <div class="tentang-content">
+                <img src="https://via.placeholder.com/400x300/0A192F/64FFDA?text=Umaedi+Tech+HQ" alt="Tentang Umaedi Tech" class="tentang-img">
+                <div>
+                    <p><strong>Umaedi Tech</strong> adalah perusahaan teknologi yang berdedikasi untuk menciptakan solusi inovatif yang memberdayakan masa depan. Didirikan pada tahun Tahun Berdiri 2025 oleh Team UmaValencia, kami berfokus pada pengembangan perangkat lunak, kecerdasan buatan, dan konsultasi teknologi.</p>
+                    <p>Visi kami adalah menjadi yang terdepan dalam transformasi digital, membantu bisnis dan individu memanfaatkan potensi penuh teknologi. Kami percaya pada kekuatan kolaborasi, integritas, dan keunggulan dalam setiap proyek yang kami kerjakan.</p>
+                    <h3>Misi Kami:</h3>
+                    <ul>
+                        <li><i class="fas fa-rocket"></i> Mengembangkan produk teknologi yang intuitif, handal, dan berdampak.</li>
+                        <li><i class="fas fa-users"></i> Memberikan layanan konsultasi ahli untuk membantu klien mencapai tujuan mereka.</li>
+                        <li><i class="fas fa-brain"></i> Mendorong inovasi melalui riset dan pengembangan berkelanjutan.</li>
+                        <li><i class="fas fa-globe"></i> Berkontribusi pada kemajuan teknologi untuk masyarakat luas.</li>
+                    </ul>
+                    <p>Tim kami terdiri dari para profesional berbakat dengan keahlian di berbagai bidang teknologi. Kami berkomitmen untuk memberikan kualitas tertinggi dan kepuasan pelanggan.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Umaedi Tech. Semua Hak Dilindungi. Dirancang dengan <i class="fas fa-heart" style="color: #64ffda;"></i> oleh Teknologi.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script_menu.js"></script>
+    <!-- Tombol Chatbot -->
+<div id="chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 320px; max-height: 500px; background: #112240; border: 1px solid #64ffda; border-radius: 8px; padding: 10px; z-index: 9999; box-shadow: 0 0 20px rgba(0,255,255,0.1); overflow-y: auto; display: none;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <strong style="color: #64ffda;">Asisten Umaedi</strong>
+        <button onclick="document.getElementById('chatbot').style.display='none'" style="background: none; border: none; color: white;">&times;</button>
+    </div>
+    <div id="chat-content" style="margin-top: 10px; color: #a8b2d1; font-size: 0.9em;"></div>
+    <input type="text" id="chat-input" placeholder="Tanyakan sesuatu..." style="width: 100%; padding: 8px; border-radius: 5px; border: none; margin-top: 10px;">
+</div>
+<button onclick="document.getElementById('chatbot').style.display='block'" style="position: fixed; bottom: 20px; right: 20px; z-index: 9998; background: #64ffda; border: none; padding: 10px 15px; border-radius: 50%; font-size: 1.5em; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer;">💬</button>
+
+</body>
+</html>

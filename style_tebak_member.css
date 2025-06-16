@@ -1,0 +1,85 @@
+/* style_tebak_member.css */
+
+.game-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #112240;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#image-container img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #64ffda;
+    margin-bottom: 20px;
+}
+
+#options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    border: 2px solid #233554;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: rgba(100, 255, 218, 0.1);
+    border-color: #64ffda;
+}
+
+.option-btn.correct {
+    background-color: #28a745; /* Hijau untuk jawaban benar */
+    color: white;
+    border-color: #28a745;
+}
+
+.option-btn.wrong {
+    background-color: #dc3545; /* Merah untuk jawaban salah */
+    color: white;
+    border-color: #dc3545;
+}
+
+#next-btn {
+    background-color: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#next-btn:hover {
+    background-color: #52d3bc;
+}
+
+#score-container {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #64ffda;
+}
+
+#feedback {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    min-height: 25px;
+}

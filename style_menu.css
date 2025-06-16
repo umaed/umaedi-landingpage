@@ -475,18 +475,51 @@ body, html {
 }
 
 /* Responsif untuk layar kecil */
+/* GANTI blok media query yang lama dengan yang ini di style_menu.css */
+
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
         width: calc(100% - 40px);
+        /* Mengubah navbar agar item tersusun vertikal di mobile */
+        flex-direction: column; 
+        align-items: flex-start; /* Rata kiri */
     }
+
     .nav-links {
-        display: none; /* Sembunyikan link untuk menu burger jika diperlukan nanti */
-        /* Atau buat jadi vertikal di bawah logo */
+        /* Hapus display: none; dan buat jadi vertikal */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px; /* Jarak antara logo dan link */
     }
+    
+    .nav-links li {
+        margin-left: 0; /* Hapus margin kiri */
+        width: 100%;
+        text-align: left; /* Teks rata kiri */
+        margin-bottom: 10px; /* Jarak antar link */
+    }
+    
+    .nav-links a {
+        display: block; /* Agar link memenuhi lebar li */
+        padding: 10px;
+    }
+
+    .user-profile {
+        /* Pindahkan profil pengguna ke sudut kanan atas */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
     .main-content {
-        padding: 80px 20px 20px;
+        /* Beri ruang lebih di atas karena navbar lebih tinggi */
+        padding-top: 180px; /* Sesuaikan nilainya jika perlu */
+        padding-left: 20px;
+        padding-right: 20px;
     }
+
     .main-content h1 {
         font-size: 2.2em;
     }
@@ -499,6 +532,7 @@ body, html {
     .video-grid, .produk-grid, .galeri-grid {
         grid-template-columns: 1fr; /* Satu kolom di layar kecil */
     }
+}
 
 }
 
